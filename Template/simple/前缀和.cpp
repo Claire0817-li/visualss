@@ -19,7 +19,7 @@ int main()
     for(ll i=1;i<=n;i++)
     {
         cin>>a[i];
-        pre[i]=pre[i-1]+a[i];
+        pre[i]=pre[i-1]+a[i];  // 验证推送
     }
     while(q--)
     {
