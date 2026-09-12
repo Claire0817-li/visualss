@@ -87,7 +87,6 @@ Point getNode(Point A, Point u, Point B, Point v)
     double t=((B-A)*v)/(u*v);
     return A+u*t;
 }
-
 /*
 getDP2：原点到线段ab，求垂足；计算线段ab和圆交点pa、pb
 a,b：线段两个端点
@@ -99,7 +98,6 @@ double getDP2(Point a, Point b, Point &pa, Point &pb)
     // b-a 线段方向；rotate旋转90度得到垂线方向；求原点向线段ab作垂线得到垂足e
     Point e=getNode(a,b-a,Point(0,0),rotate(b-a,PI/2));
     double d=dis(Point(0, 0),e); //原点到垂足距离
-
     //如果半径大于垂足距离：线段和圆有交点，计算两个交点pa pb
     if(r>d)
     {
@@ -116,7 +114,6 @@ double getDP2(Point a, Point b, Point &pa, Point &pb)
     //垂足在线段上，返回原点到线段垂直距离
     return d;
 }
-
 /*
 sector(a,b)：求扇形Oab的有向面积
 a,b是从原点出发的向量
@@ -128,7 +125,6 @@ double sector(Point a,Point b)
     double ang=atan2(a*b,a&b);
     return r*r*ang/2.0;
 }
-
 /*
 Area(a,b)：计算△Oab（原点O，a,b）与圆相交的【有向面积】
 a,b是原点出发的向量
@@ -143,21 +139,14 @@ double Area(Point a,Point b)
 {
     //o a b三点共线，面积为0
     if(fabs(a*b)<eps) return 0.0;
-
     double da=dis(Point(0,0),a); //原点到a距离
     double db=dis(Point(0,0),b); //原点到b距离
-
     //a,b两点全部落在圆内部：直接返回三角形Oab的有向面积
-    if(r>=da&&r>=db)
-        return a*b/2.0;
-
+    if(r>=da&&r>=db)     return a*b/2.0;
     Point pa,pb; //线段ab与圆的交点
     double d=getDP2(a,b,pa,pb);
-
     //线段ab距离原点>=半径，线段和圆没有相交，直接扇形面积
-    if(r<=d)
-        return sector(a,b);
-
+    if(r<=d)    return sector(a,b);
     //a在圆内，b在圆外：O‑a‑pb三角形 + pb到b扇形
     if(r>=da)
     {

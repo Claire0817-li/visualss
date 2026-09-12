@@ -30,8 +30,6 @@ j倒序循环（分组背包，01背包思想，防止重复选）；
 
 #include <bits/stdc++.h>
 using namespace std;
-
-//类型别名简化书写
 using ll=long long;
 using vi=vector<int>;
 using vl=vector<ll>;
