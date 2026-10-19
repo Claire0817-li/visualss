@@ -16,7 +16,7 @@ using namespace std;
 using ll=long long;
 
 const double PI=acos(-1.0);
-const double eps=1e-8;
+const double eps=1e-8; // 嵌套目录验证
 double r; //圆的半径
 
 //点结构体，同时重载向量加减、数乘、叉积、点积
@@ -187,7 +187,8 @@ int main()
             res+=Area(p[i],p[j]);
         }
         //保留2位小数输出，取绝对值消除有向面积正负
-        cout<<fixed<<setprecision(2)<<fabs(res)<<"\n";
+        cout<<fixed<<setprecision(2)<<fabs(res)<<"
+";
     }
     return 0;
 }
