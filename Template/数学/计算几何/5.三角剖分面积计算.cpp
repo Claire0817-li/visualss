@@ -16,7 +16,7 @@ using namespace std;
 using ll=long long;
 
 const double PI=acos(-1.0);
-const double eps=1e-8; // 嵌套目录验证
+const double eps=1e-8;
 double r; //圆的半径
 
 //点结构体，同时重载向量加减、数乘、叉积、点积
