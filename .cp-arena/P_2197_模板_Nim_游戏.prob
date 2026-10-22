@@ -1,0 +1,17 @@
+{
+  "name": "P2197 【模板】Nim 游戏",
+  "group": "Luogu",
+  "url": "https://www.luogu.com.cn/problem/P2197",
+  "timeLimit": 1000,
+  "memoryLimit": 125,
+  "testCases": [
+    {
+      "id": 1,
+      "input": "2\n2\n1 1\n2\n1 0\n",
+      "expectedOutput": "No\nYes\n",
+      "verdict": "PENDING"
+    }
+  ],
+  "srcPath": "d:\\visualss\\P_2197_模板_Nim_游戏.cpp",
+  "language": "cpp"
+}
