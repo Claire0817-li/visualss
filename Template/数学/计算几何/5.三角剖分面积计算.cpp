@@ -187,7 +187,8 @@ int main()
             res+=Area(p[i],p[j]);
         }
         //保留2位小数输出，取绝对值消除有向面积正负
-        cout<<fixed<<setprecision(2)<<fabs(res)<<"\n";
+        cout<<fixed<<setprecision(2)<<fabs(res)<<"
+";
     }
     return 0;
 }
