@@ -21,6 +21,7 @@
 n≤26，规模很小，每次完整重跑拓扑时间完全够用。
 */
 #include <bits/stdc++.h>
+  // 新库路径验证
 using namespace std;
 using ll=long long;
 using vi=vector<int>;
